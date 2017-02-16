@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/ProjectCategories/1947441
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/ProjectCategories/1947441
     body:
       encoding: UTF-8
       string: ''
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 16:47:51 GMT
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/ProjectCategories
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/ProjectCategories
     body:
       encoding: UTF-8
       string: '{"CATEGORY_ID":1947441,"CATEGORY_NAME":"Email","ACTIVE":true,"BACKGROUND_COLOR":"9a482f"}'
@@ -72,7 +72,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/ProjectCategories/2176365
+      - https://api.insight.ly/v2.2/ProjectCategories/2176365
       Server:
       - Microsoft-IIS/7.5
       Date:

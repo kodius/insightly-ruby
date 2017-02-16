@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::TaskCategories do
   let(:task_category_id) { 1947437 }
 
-  # GET /v2.1/TaskCategories/{id}
+  # GET /v2.2/TaskCategories/{id}
   describe '#get_task_category' do
     it 'returns a task category' do
       VCR.use_cassette('get_task_category') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::TaskCategories do
     end
   end
 
-  # GET /v2.1/TaskCategories
+  # GET /v2.2/TaskCategories
   describe '#get_task_categories' do
     it 'returns an array of task_categories' do
       VCR.use_cassette('get_task_categories') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::TaskCategories do
     end
   end
 
-  # POST /v2.1/TaskCategories
+  # POST /v2.2/TaskCategories
   describe '#create_task_category' do
     it 'creates and returns task_category' do
       VCR.use_cassette('create_task_category') do
@@ -33,7 +33,7 @@ describe Insightly2::DSL::TaskCategories do
     end
   end
 
-  # PUT /v2.1/TaskCategories
+  # PUT /v2.2/TaskCategories
   describe '#update_task_category' do
     it 'updates and returns task_category' do
       VCR.use_cassette('update_task_category') do
@@ -43,7 +43,7 @@ describe Insightly2::DSL::TaskCategories do
     end
   end
 
-  # DELETE /v2.1/TaskCategories/{id}
+  # DELETE /v2.2/TaskCategories/{id}
   describe '#delete_task_category' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_task_category') do

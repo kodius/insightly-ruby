@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::FileAttachments
-    # GET /v2.1/FileAttachments/{id}
+    # GET /v2.2/FileAttachments/{id}
     # @param [String, Fixnum] id A file attachment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].

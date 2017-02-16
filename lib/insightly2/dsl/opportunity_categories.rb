@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::OpportunityCategories
-    # GET /v2.1/OpportunityCategories/{id}
+    # GET /v2.2/OpportunityCategories/{id}
     # Get an opportunity category.
     # @param [String, Fixnum] id An opportunity category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,14 +12,14 @@ module Insightly2
       Resources::OpportunityCategory.parse(request(:get, "OpportunityCategories/#{id}"))
     end
 
-    # GET /v2.1/OpportunityCategories
+    # GET /v2.2/OpportunityCategories
     # Get a list of opportunity categories.
     # @return [Array, nil].
     def get_opportunity_categories
       Resources::OpportunityCategory.parse(request(:get, "OpportunityCategories"))
     end
 
-    # POST /v2.1/OpportunityCategories
+    # POST /v2.2/OpportunityCategories
     # Create an opportunity category.
     # @param [Hash] category The opportunity category to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -29,7 +29,7 @@ module Insightly2
       Resources::OpportunityCategory.parse(request(:post, "OpportunityCategories", category))
     end
 
-    # PUT /v2.1/OpportunityCategories
+    # PUT /v2.2/OpportunityCategories
     # Update an opportunity category.
     # @param [Hash] category The opportunity category to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -39,7 +39,7 @@ module Insightly2
       Resources::OpportunityCategory.parse(request(:put, "OpportunityCategories", category))
     end
 
-    # DELETE /v2.1/OpportunityCategories/{id}
+    # DELETE /v2.2/OpportunityCategories/{id}
     # Delete an opportunity category.
     # @param [String, Fixnum] id A OpportunityCategory's ID.
     # @raise [ArgumentError] If the method arguments are blank.

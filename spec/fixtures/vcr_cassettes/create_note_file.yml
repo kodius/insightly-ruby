@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes?c_id=15377334&filename=1.jpg
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Notes?c_id=15377334&filename=1.jpg
     body:
       encoding: UTF-8
       string: ''

@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Currencies
-    # GET /v2.1/Currencies
+    # GET /v2.2/Currencies
     # Get a list of currencies.
     # @return [Array, nil].
     def get_currencies

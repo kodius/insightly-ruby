@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::OpportunityCategories do
   let(:opportunity_category_id) { 2175382 }
 
-  # GET /v2.1/OpportunityCategories/{id}
+  # GET /v2.2/OpportunityCategories/{id}
   describe '#get_opportunity_category' do
     it 'returns an opportunity category' do
       VCR.use_cassette('get_opportunity_category') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::OpportunityCategories do
     end
   end
 
-  # GET /v2.1/OpportunityCategories
+  # GET /v2.2/OpportunityCategories
   describe '#get_opportunity_categories' do
     it 'returns an array of opportunity_categories' do
       VCR.use_cassette('get_opportunity_categories') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::OpportunityCategories do
     end
   end
 
-  # POST /v2.1/OpportunityCategories
+  # POST /v2.2/OpportunityCategories
   describe '#create_opportunity_category' do
     it 'creates and returns an opportunity category' do
       VCR.use_cassette('create_opportunity_category') do
@@ -33,7 +33,7 @@ describe Insightly2::DSL::OpportunityCategories do
     end
   end
 
-  # PUT /v2.1/OpportunityCategories
+  # PUT /v2.2/OpportunityCategories
   describe '#update_opportunity_category' do
     it 'updates and returns an opportunity category' do
       VCR.use_cassette('update_opportunity_category') do
@@ -43,7 +43,7 @@ describe Insightly2::DSL::OpportunityCategories do
     end
   end
 
-  # DELETE /v2.1/OpportunityCategories/{id}
+  # DELETE /v2.2/OpportunityCategories/{id}
   describe '#delete_opportunity_category' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_opportunity_category') do

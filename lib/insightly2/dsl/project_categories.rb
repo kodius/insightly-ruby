@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::ProjectCategories
-    # GET /v2.1/ProjectCategories/{id}
+    # GET /v2.2/ProjectCategories/{id}
     # Get a project category.
     # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,14 +12,14 @@ module Insightly2
       Resources::ProjectCategory.parse(request(:get, "ProjectCategories/#{id}"))
     end
 
-    # GET /v2.1/ProjectCategories
+    # GET /v2.2/ProjectCategories
     # Get a list of project categories.
     # @return [Array, nil].
     def get_project_categories
       Resources::ProjectCategory.parse(request(:get, "ProjectCategories"))
     end
 
-    # POST /v2.1/ProjectCategories
+    # POST /v2.2/ProjectCategories
     # Create a project category.
     # @param [Hash] category: The project category to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -29,7 +29,7 @@ module Insightly2
       Resources::ProjectCategory.parse(request(:post, "ProjectCategories", category))
     end
 
-    # PUT /v2.1/ProjectCategories
+    # PUT /v2.2/ProjectCategories
     # Update a project category.
     # @param [Hash] category The project category to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -39,7 +39,7 @@ module Insightly2
       Resources::ProjectCategory.parse(request(:put, "ProjectCategories", category))
     end
 
-    # DELETE /v2.1/ProjectCategories/{id}
+    # DELETE /v2.2/ProjectCategories/{id}
     # Delete a project category.
     # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.

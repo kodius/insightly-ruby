@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/TeamMembers/5016224
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/TeamMembers/5016224
     body:
       encoding: UTF-8
       string: ''
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 17:36:33 GMT
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/TeamMembers
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/TeamMembers
     body:
       encoding: UTF-8
       string: '{"PERMISSION_ID":5016224,"TEAM_ID":2063767,"MEMBER_USER_ID":607181,"MEMBER_TEAM_ID":null}'
@@ -72,7 +72,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/TeamMembers/5016224
+      - https://api.insight.ly/v2.2/TeamMembers/5016224
       Server:
       - Microsoft-IIS/7.5
       Date:

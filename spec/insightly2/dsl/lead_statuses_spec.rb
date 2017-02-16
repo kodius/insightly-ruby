@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::LeadStatuses do
-  # GET /v2.1/LeadStatuses
+  # GET /v2.2/LeadStatuses
   describe '#get_lead_status' do
     it 'returns an array of lead statuses' do
       VCR.use_cassette('get_lead_statuses') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::LeadStatuses do
     end
   end
 
-  # POST /v2.1/LeadStatuses
+  # POST /v2.2/LeadStatuses
   describe '#create_lead_status' do
     it 'creates and returns a lead status' do
       VCR.use_cassette('create_lead_status') do
@@ -22,7 +22,7 @@ describe Insightly2::DSL::LeadStatuses do
     end
   end
 
-  # PUT /v2.1/LeadStatuses
+  # PUT /v2.2/LeadStatuses
   describe '#update_lead_status' do
     it 'updates and returns a lead status' do
       VCR.use_cassette('update_lead_status') do
@@ -32,7 +32,7 @@ describe Insightly2::DSL::LeadStatuses do
     end
   end
 
-  # DELETE /v2.1/LeadStatuses/{id}
+  # DELETE /v2.2/LeadStatuses/{id}
   describe '#delete_lead_status' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_lead_status') do

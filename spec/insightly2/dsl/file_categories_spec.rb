@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::FileCategories do
   let(:file_category_id) { 1947439 }
 
-  # GET /v2.1/FileCategories/{id}
+  # GET /v2.2/FileCategories/{id}
   describe '#get_file_category' do
     it 'returns a file category' do
       VCR.use_cassette('get_file_category') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::FileCategories do
     end
   end
 
-  # GET /v2.1/FileCategories
+  # GET /v2.2/FileCategories
   describe '#get_file_categories' do
     it 'returns an array of file_categories' do
       VCR.use_cassette('get_file_categories') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::FileCategories do
     end
   end
 
-  # POST /v2.1/FileCategories
+  # POST /v2.2/FileCategories
   describe '#create_file_category' do
     it 'creates and returns a file category' do
       VCR.use_cassette('create_file_category') do
@@ -33,7 +33,7 @@ describe Insightly2::DSL::FileCategories do
     end
   end
 
-  # PUT /v2.1/FileCategories
+  # PUT /v2.2/FileCategories
   describe '#update_file_category' do
     it 'updates and returns a file category' do
       VCR.use_cassette('update_file_category') do
@@ -43,7 +43,7 @@ describe Insightly2::DSL::FileCategories do
     end
   end
 
-  # DELETE /v2.1/FileCategories/{id}
+  # DELETE /v2.2/FileCategories/{id}
   describe '#delete_file_category' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_file_category') do

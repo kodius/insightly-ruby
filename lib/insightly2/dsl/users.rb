@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Users
-    # GET /v2.1/Users/{id}
+    # GET /v2.2/Users/{id}
     # Get a user.
     # @param [String, Fixnum] id A user's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::User.parse(request(:get, "Users/#{id}"))
     end
 
-    # GET /v2.1/Users
+    # GET /v2.2/Users
     # Get a list of users.
     # @return [Array, nil]
     def get_users

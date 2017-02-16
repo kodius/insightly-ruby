@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Organisations/39831139
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Organisations/39831139
     body:
       encoding: UTF-8
       string: ''
@@ -54,7 +54,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 07:01:27 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Organisations
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Organisations
     body:
       encoding: UTF-8
       string: '{"ORGANISATION_ID":39831139,"ORGANISATION_NAME":"WeCellStuff.com","BACKGROUND":"We
@@ -90,7 +90,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Organisations/39831139
+      - https://api.insight.ly/v2.2/Organisations/39831139
       Vary:
       - Accept-Encoding
       Server:

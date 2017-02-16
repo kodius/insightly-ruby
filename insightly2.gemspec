@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Insightly2::VERSION
   spec.authors       = ['Alexander Semyonov', 'Michael Kompanets', 'David Iorns']
   spec.email         = ['al@semyonov.us', 'michael@scienceexchange.com', 'david@scienceexchange.com']
-  spec.summary       = 'A Ruby wrapper for the Insightly v2.1 API https://api.insight.ly/v2.1/Help'
+  spec.summary       = 'A Ruby wrapper for the Insightly v2.1 API https://api.insight.ly/v2.2/Help'
   spec.homepage      = 'https://github.com/insightly/ruby'
 
   spec.files         = `git ls-files -z`.split("\x0")

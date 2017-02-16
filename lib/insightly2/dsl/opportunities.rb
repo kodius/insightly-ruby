@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Opportunities
-    # GET /v2.1/Opportunities/{id}
+    # GET /v2.2/Opportunities/{id}
     # Get an opportunity.
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Opportunity.parse(request(:get, "Opportunities/#{id}"))
     end
 
-    # GET /v2.1/Opportunities/{c_id}/Emails
+    # GET /v2.2/Opportunities/{c_id}/Emails
     # Get an opportunity's emails.
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,7 +22,7 @@ module Insightly2
       Resources::Email.parse(request(:get, "Opportunities/#{id}/Emails"))
     end
 
-    # GET /v2.1/Opportunities/{c_id}/Image
+    # GET /v2.2/Opportunities/{c_id}/Image
     # @param [String, Fixnum] id An opportunity's ID
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response]
@@ -30,7 +30,7 @@ module Insightly2
       request(:get, "Opportunities/#{id}/Image")
     end
 
-    # GET /v2.1/Opportunities/{c_id}/Notes
+    # GET /v2.2/Opportunities/{c_id}/Notes
     # Get an opportunity's notes.
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -40,7 +40,7 @@ module Insightly2
       Resources::Note.parse(request(:get, "Opportunities/#{id}/Notes"))
     end
 
-    # GET /v2.1/Opportunities/{c_id}/StateHistory
+    # GET /v2.2/Opportunities/{c_id}/StateHistory
     # Get an opportunity's state history.
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -50,7 +50,7 @@ module Insightly2
       Resources::OpportunityStateReason.parse(request(:get, "Opportunities/#{id}/StateHistory"))
     end
 
-    # GET /v2.1/Opportunities/{c_id}/Tasks
+    # GET /v2.2/Opportunities/{c_id}/Tasks
     # Get an opportunity's tasks.
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -60,7 +60,7 @@ module Insightly2
       Resources::Task.parse(request(:get, "Opportunities/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Opportunities?ids={ids}&tag={tag}
+    # GET /v2.2/Opportunities?ids={ids}&tag={tag}
     # Get a list of opportunities.
     # @param [Array] ids IDs of opportunities (optional).
     # @param [String] tag The tag that has been applied to an opportunity (optional).
@@ -70,7 +70,7 @@ module Insightly2
       Resources::Opportunity.parse(request(:get, url))
     end
 
-    # POST /v2.1/Opportunities
+    # POST /v2.2/Opportunities
     # Create an opportunity.
     # @param [Hash] opportunity The opportunity to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -80,7 +80,7 @@ module Insightly2
       Resources::Opportunity.parse(request(:post, "Opportunities", opportunity))
     end
 
-    # POST /v2.1/Opportunities/{c_id}/Image/{filename}
+    # POST /v2.2/Opportunities/{c_id}/Image/{filename}
     # Add an attachment to an opportunity.
     # @param [String, Fixnum] id An opportunity's ID.
     # @param [String] filename A name of a file.
@@ -92,7 +92,7 @@ module Insightly2
       request(:post, "Opportunities/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Opportunities
+    # PUT /v2.2/Opportunities
     # Update an opportunity.
     # @param [Hash] opportunity The opportunity to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -102,7 +102,7 @@ module Insightly2
       Resources::Opportunity.parse(request(:put, "Opportunities", opportunity))
     end
 
-    # PUT /v2.1/Opportunities/{c_id}/Image/{filename}
+    # PUT /v2.2/Opportunities/{c_id}/Image/{filename}
     # @param [String, Fixnum] id An opportunity's ID.
     # @param [String] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -113,7 +113,7 @@ module Insightly2
       request(:put, "Opportunities/#{id}/Image/#{filename}")
     end
 
-    # DELETE /v2.1/Opportunities/{id}
+    # DELETE /v2.2/Opportunities/{id}
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
@@ -122,7 +122,7 @@ module Insightly2
       request(:delete, "Opportunities/#{id}")
     end
 
-    # DELETE /v2.1/Opportunities/{c_id}/Image
+    # DELETE /v2.2/Opportunities/{c_id}/Image
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].

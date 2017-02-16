@@ -4,7 +4,7 @@ describe Insightly2::DSL::TeamMembers do
   let(:team_member_id) { 5016224 }
   let(:team_id) { 2063767 }
 
-  # GET /v2.1/TeamMembers/{id}
+  # GET /v2.2/TeamMembers/{id}
   describe '#get_team_member' do
     it 'returns a team member' do
       VCR.use_cassette('get_team_member') do
@@ -13,7 +13,7 @@ describe Insightly2::DSL::TeamMembers do
     end
   end
 
-  # GET /v2.1/TeamMembers?teamid={teamid}
+  # GET /v2.2/TeamMembers?teamid={teamid}
   describe '#get_team_members' do
     it 'returns an array of team_members' do
       VCR.use_cassette('get_team_members') do
@@ -24,7 +24,7 @@ describe Insightly2::DSL::TeamMembers do
     end
   end
 
-  # POST /v2.1/TeamMembers
+  # POST /v2.2/TeamMembers
   describe '#create_team_member' do
     it 'creates and returns a team_member' do
       VCR.use_cassette('create_team_member') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::TeamMembers do
     end
   end
 
-  # PUT /v2.1/TeamMembers
+  # PUT /v2.2/TeamMembers
   describe '#update_team_member' do
     it 'updates and returns a team_member' do
       VCR.use_cassette('update_team_member') do
@@ -44,7 +44,7 @@ describe Insightly2::DSL::TeamMembers do
     end
   end
 
-  # DELETE /v2.1/TeamMembers/{id}
+  # DELETE /v2.2/TeamMembers/{id}
   describe '#delete_team_member' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_team_member') do

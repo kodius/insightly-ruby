@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::TaskCategories
-    # GET /v2.1/TaskCategories/{id}
+    # GET /v2.2/TaskCategories/{id}
     # Get a task category.
     # @param [String, Fixnum] id A task category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,14 +12,14 @@ module Insightly2
       Resources::TaskCategory.parse(request(:get, "TaskCategories/#{id}"))
     end
 
-    # GET /v2.1/TaskCategories
+    # GET /v2.2/TaskCategories
     # Get a list of task categories.
     # @return [Insightly2::Resources::TaskCategory, nil].
     def get_task_categories
       Resources::TaskCategory.parse(request(:get, "TaskCategories"))
     end
 
-    # POST /v2.1/TaskCategories
+    # POST /v2.2/TaskCategories
     # Creates a task category.
     # @param [Hash] category The task category to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -29,7 +29,7 @@ module Insightly2
       Resources::TaskCategory.parse(request(:post, "TaskCategories", category))
     end
 
-    # PUT /v2.1/TaskCategories
+    # PUT /v2.2/TaskCategories
     # Updates a task category.
     # @param [Hash] category The task category to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -39,7 +39,7 @@ module Insightly2
       Resources::TaskCategory.parse(request(:put, "TaskCategories", category))
     end
 
-    # DELETE /v2.1/TaskCategories/{id}
+    # DELETE /v2.2/TaskCategories/{id}
     # Delete a task category.
     # @param [String, Fixnum] id A task category's ID.
     # @raise [ArgumentError] If the method arguments are blank.

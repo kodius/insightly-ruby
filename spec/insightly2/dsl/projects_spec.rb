@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Projects do
   let(:project_id) { 1657941 }
 
-  # GET /v2.1/Projects/{id}
+  # GET /v2.2/Projects/{id}
   describe '#get_project' do
     it 'returns a project' do
       VCR.use_cassette('get_project') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # GET /v2.1/Projects/{c_id}/Emails
+  # GET /v2.2/Projects/{c_id}/Emails
   describe '#get_project_emails' do
     it 'returns project emails' do
       VCR.use_cassette('get_project_emails') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # GET /v2.1/Projects/{c_id}/Image
+  # GET /v2.2/Projects/{c_id}/Image
   # describe '#get_project_image' do
   #   it 'returns project image' do
   #     VCR.use_cassette('get_project_image') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Projects do
   #   end
   # end
 
-  # GET /v2.1/Projects/{c_id}/Notes
+  # GET /v2.2/Projects/{c_id}/Notes
   describe '#get_project_notes' do
     it 'returns project notes' do
       VCR.use_cassette('get_project_notes') do
@@ -45,7 +45,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # GET /v2.1/Projects/{c_id}/Tasks
+  # GET /v2.2/Projects/{c_id}/Tasks
   describe '#get_project_tasks' do
     it 'returns project tasks' do
       VCR.use_cassette('get_project_tasks') do
@@ -56,7 +56,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # GET /v2.1/Projects?ids={ids}&tag={tag}
+  # GET /v2.2/Projects?ids={ids}&tag={tag}
   describe '#get_projects' do
     it 'returns an array of projects' do
       VCR.use_cassette('get_projects') do
@@ -67,7 +67,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # POST /v2.1/Projects
+  # POST /v2.2/Projects
   describe '#create_project' do
     it 'creates and returns a project' do
       VCR.use_cassette('create_project') do
@@ -77,7 +77,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # POST /v2.1/Projects/{c_id}/Image/{filename}
+  # POST /v2.2/Projects/{c_id}/Image/{filename}
   # describe '#create_project_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('create_project_image') do
@@ -88,7 +88,7 @@ describe Insightly2::DSL::Projects do
   #   end
   # end
 
-  # PUT /v2.1/Projects
+  # PUT /v2.2/Projects
   describe '#update_project' do
     it 'updates and returns a project' do
       VCR.use_cassette('update_project') do
@@ -98,7 +98,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # PUT /v2.1/Projects/{c_id}/Image/{filename}
+  # PUT /v2.2/Projects/{c_id}/Image/{filename}
   # describe '#update_project_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('update_project_image') do
@@ -109,7 +109,7 @@ describe Insightly2::DSL::Projects do
   #   end
   # end
 
-  # DELETE /v2.1/Projects/{id}
+  # DELETE /v2.2/Projects/{id}
   describe '#delete_project' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_project') do
@@ -119,7 +119,7 @@ describe Insightly2::DSL::Projects do
     end
   end
 
-  # DELETE /v2.1/Projects/{c_id}/Image
+  # DELETE /v2.2/Projects/{c_id}/Image
   describe '#delete_project_image' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_project_image') do

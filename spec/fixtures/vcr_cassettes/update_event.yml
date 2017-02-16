@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Events/2402366
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events/2402366
     body:
       encoding: UTF-8
       string: ''
@@ -47,7 +47,7 @@ http_interactions:
   recorded_at: Sat, 04 Oct 2014 22:45:11 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Events
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events
     body:
       encoding: UTF-8
       string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
@@ -76,7 +76,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Events/2402366
+      - https://api.insight.ly/v2.2/Events/2402366
       Vary:
       - Accept-Encoding
       Server:

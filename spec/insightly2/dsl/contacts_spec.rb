@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Contacts do
   let(:contact_id) { 70653019 }
 
-  # GET /v2.1/Contacts/{id}
+  # GET /v2.2/Contacts/{id}
   describe '#get_contact' do
     it 'returns a contact' do
       VCR.use_cassette('get_contact') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # GET /v2.1/Contacts/{c_id}/Emails
+  # GET /v2.2/Contacts/{c_id}/Emails
   describe '#get_contact_emails' do
     it 'returns a contacts emails' do
       VCR.use_cassette('get_contact_emails') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # GET /v2.1/Contacts/{c_id}/Notes
+  # GET /v2.2/Contacts/{c_id}/Notes
   describe '#get_contact_notes' do
     it 'returns a contacts notes' do
       VCR.use_cassette('get_contact_notes') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # GET /v2.1/Contacts/{c_id}/Tasks
+  # GET /v2.2/Contacts/{c_id}/Tasks
   describe '#get_contact_tasks' do
     it 'returns a contacts tasks' do
       VCR.use_cassette('get_contact_tasks') do
@@ -45,7 +45,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # GET /v2.1/Contacts/{c_id}/Image
+  # GET /v2.2/Contacts/{c_id}/Image
   # describe '#get_contact_image' do
   #   it 'returns a contacts image' do
   #     VCR.use_cassette('get_contact_image') do
@@ -56,7 +56,7 @@ describe Insightly2::DSL::Contacts do
   #   end
   # end
 
-  # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
+  # GET /v2.2/Contacts?ids={ids}&email={email}&tag={tag}
   describe '#get_contacts' do
     it 'returns an array of contacts' do
       VCR.use_cassette('get_contacts') do
@@ -67,7 +67,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # POST /v2.1/Contacts
+  # POST /v2.2/Contacts
   describe '#create_contact' do
     it 'creates and returns contact' do
       VCR.use_cassette('create_contact') do
@@ -76,7 +76,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # POST /v2.1/Contacts/{c_id}/Image/{filename}
+  # POST /v2.2/Contacts/{c_id}/Image/{filename}
   # describe '#create_contact_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('create_contact_image') do
@@ -87,7 +87,7 @@ describe Insightly2::DSL::Contacts do
   #   end
   # end
 
-  # PUT /v2.1/Contacts
+  # PUT /v2.2/Contacts
   describe '#update_contact' do
     it 'updates and returns contact' do
       VCR.use_cassette('update_contact') do
@@ -97,7 +97,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # PUT /v2.1/Contacts/{c_id}/Image/{filename}
+  # PUT /v2.2/Contacts/{c_id}/Image/{filename}
   # describe '#update_contact_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('update_contact_image') do
@@ -108,7 +108,7 @@ describe Insightly2::DSL::Contacts do
   #   end
   # end
 
-  # DELETE /v2.1/Contacts/{id}
+  # DELETE /v2.2/Contacts/{id}
   describe '#delete_contact' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_contact') do
@@ -118,7 +118,7 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
-  # DELETE /v2.1/Contacts/{c_id}/Image
+  # DELETE /v2.2/Contacts/{c_id}/Image
   describe '#delete_contact_image' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_contact_image') do

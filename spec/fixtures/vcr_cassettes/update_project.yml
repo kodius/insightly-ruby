@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Projects/1657941
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Projects/1657941
     body:
       encoding: UTF-8
       string: ''
@@ -51,7 +51,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 17:07:28 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Projects
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Projects
     body:
       encoding: UTF-8
       string: '{"PROJECT_ID":1657941,"PROJECT_NAME":"The leaves are lovely this time
@@ -84,7 +84,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Projects/1657941
+      - https://api.insight.ly/v2.2/Projects/1657941
       Vary:
       - Accept-Encoding
       Server:

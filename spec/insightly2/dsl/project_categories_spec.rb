@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::ProjectCategories do
   let(:project_category_id) { 1947441 }
 
-  # GET /v2.1/ProjectCategories/{id}
+  # GET /v2.2/ProjectCategories/{id}
   describe '#get_project_category' do
     it 'returns an project_category' do
       VCR.use_cassette('get_project_category') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::ProjectCategories do
     end
   end
 
-  # GET /v2.1/ProjectCategories
+  # GET /v2.2/ProjectCategories
   describe '#get_project_categories' do
     it 'returns an array of project_categories' do
       VCR.use_cassette('get_project_categories') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::ProjectCategories do
     end
   end
 
-  # POST /v2.1/ProjectCategories
+  # POST /v2.2/ProjectCategories
   describe '#create_project_category' do
     it 'creates and returns a project_category' do
       VCR.use_cassette('create_project_category') do
@@ -33,7 +33,7 @@ describe Insightly2::DSL::ProjectCategories do
     end
   end
 
-  # PUT /v2.1/ProjectCategories
+  # PUT /v2.2/ProjectCategories
   describe '#update_project_category' do
     it 'updates and returns a project_category' do
       VCR.use_cassette('update_project_category') do
@@ -43,7 +43,7 @@ describe Insightly2::DSL::ProjectCategories do
     end
   end
 
-  # DELETE /v2.1/ProjectCategories/{id}
+  # DELETE /v2.2/ProjectCategories/{id}
   describe '#delete_project_category' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_project_category') do

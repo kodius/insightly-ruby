@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/FileCategories/1947439
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/FileCategories/1947439
     body:
       encoding: UTF-8
       string: ''
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Sat, 04 Oct 2014 23:11:05 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/FileCategories
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/FileCategories
     body:
       encoding: UTF-8
       string: '{"CATEGORY_ID":1947439,"CATEGORY_NAME":"Follow-up","ACTIVE":true,"BACKGROUND_COLOR":"2f9a84"}'
@@ -72,7 +72,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/FileCategories/1947439
+      - https://api.insight.ly/v2.2/FileCategories/1947439
       Vary:
       - Accept-Encoding
       Server:

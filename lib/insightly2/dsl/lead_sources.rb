@@ -2,14 +2,14 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::LeadSources
-    # GET /v2.1/LeadSources
+    # GET /v2.2/LeadSources
     # Get a list of lead sources.
     # @return [Array, nil].
     def get_lead_sources
       Resources::LeadSource.parse(request(:get, "LeadSources"))
     end
 
-    # POST /v2.1/LeadSources
+    # POST /v2.2/LeadSources
     # Create a lead source.
     # @param [Hash] lead_source: The lead source to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -19,7 +19,7 @@ module Insightly2
       Resources::LeadSource.parse(request(:post, "LeadSources", lead_source))
     end
 
-    # PUT /v2.1/LeadSources
+    # PUT /v2.2/LeadSources
     # Update a lead source.
     # @param [Hash] lead_source: The lead source to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -29,7 +29,7 @@ module Insightly2
       Resources::LeadSource.parse(request(:put, "LeadSources", lead_source))
     end
 
-    # DELETE /v2.1/LeadSources/{id}
+    # DELETE /v2.2/LeadSources/{id}
     # Delete a lead source.
     # @param [String, Fixnum] id A lead source's ID.
     # @raise [ArgumentError] If the method arguments are blank.

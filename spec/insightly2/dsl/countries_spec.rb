@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Countries do
-  # GET /v2.1/Countries
+  # GET /v2.2/Countries
   describe '#get_countries' do
     it 'returns an array of countries' do
       VCR.use_cassette('get_countries') do

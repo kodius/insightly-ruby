@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/LeadSources
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/LeadSources
     body:
       encoding: UTF-8
       string: ''
@@ -50,7 +50,7 @@ http_interactions:
   recorded_at: Fri, 26 Feb 2016 14:23:34 GMT
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/LeadSources
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/LeadSources
     body:
       encoding: UTF-8
       string: '{"FIELD_ORDER":0,"LEAD_SOURCE":"Partner Application","DEFAULT_VALUE":true,"LEAD_SOURCE_ID":841088}'
@@ -77,7 +77,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/LeadSources/844238
+      - https://api.insight.ly/v2.2/LeadSources/844238
       Server:
       - Microsoft-IIS/7.5
       X-Powered-By:

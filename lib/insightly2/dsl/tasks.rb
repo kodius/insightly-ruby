@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Tasks
-    # GET /v2.1/Tasks/{id}
+    # GET /v2.2/Tasks/{id}
     # Get a task.
     # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Task.parse(request(:get, "Tasks/#{id}"))
     end
 
-    # GET /v2.1/Tasks/{c_id}/Comments
+    # GET /v2.2/Tasks/{c_id}/Comments
     # Get a list of comments for a task.
     # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,7 +22,7 @@ module Insightly2
       Resources::Comment.parse(request(:get, "Tasks/#{id}/Comments"))
     end
 
-    # GET /v2.1/Tasks?ids={ids}
+    # GET /v2.2/Tasks?ids={ids}
     # Get a list of tasks.
     # @param [ids:] Array of task ids (optional).
     # @return [Insightly2::Resources::Task, nil].
@@ -31,7 +31,7 @@ module Insightly2
       Resources::Task.parse(request(:get, url))
     end
 
-    # POST /v2.1/Tasks
+    # POST /v2.2/Tasks
     # Create a task.
     # @param [Hash] task The task to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -41,7 +41,7 @@ module Insightly2
       Resources::Task.parse(request(:post, "Tasks", task))
     end
 
-    # POST /v2.1/Tasks/{c_id}/Comments
+    # POST /v2.2/Tasks/{c_id}/Comments
     # Create a comment for a task.
     # @param [String, Fixnum] id A task's ID.
     # @param [Hash] comment The comment to create.
@@ -53,7 +53,7 @@ module Insightly2
       Resources::Comment.parse(request(:post, "Tasks/#{id}/Comments", comment))
     end
 
-    # PUT /v2.1/Tasks
+    # PUT /v2.2/Tasks
     # Update a task.
     # @param [Hash] task The task to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -63,7 +63,7 @@ module Insightly2
       Resources::Task.parse(request(:put, "Tasks", task))
     end
 
-    # DELETE /v2.1/Tasks/{id}
+    # DELETE /v2.2/Tasks/{id}
     # Delete a task.
     # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.

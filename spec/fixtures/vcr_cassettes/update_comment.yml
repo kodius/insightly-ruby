@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Comments/3469515
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Comments/3469515
     body:
       encoding: UTF-8
       string: ''
@@ -47,7 +47,7 @@ http_interactions:
   recorded_at: Sat, 04 Oct 2014 16:49:24 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Comments
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Comments
     body:
       encoding: UTF-8
       string: '{"COMMENT_ID":3469515,"BODY":"\r\n<p>Test comment.</p>\r\n","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
@@ -76,7 +76,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Comments/3469515
+      - https://api.insight.ly/v2.2/Comments/3469515
       Vary:
       - Accept-Encoding
       Server:

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes/15377334/Comments
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Notes/15377334/Comments
     body:
       encoding: UTF-8
       string: '{"title":"Look out!"}'
@@ -29,7 +29,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Comments/3469739
+      - https://api.insight.ly/v2.2/Comments/3469739
       Server:
       - Microsoft-IIS/7.5
       Date:

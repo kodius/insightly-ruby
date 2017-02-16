@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Leads
-    # GET /v2.1/Leads/{id}
+    # GET /v2.2/Leads/{id}
     # Gets a lead by id.
     # @param [String, Fixnum] id The ID of the lead.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Lead.parse(request(:get, "Leads/#{id}"))
     end
 
-    # GET /v2.1/Leads/{c_id}/Emails
+    # GET /v2.2/Leads/{c_id}/Emails
     # Gets a lead's emails.
     # @param [id:] id of the lead.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,7 +22,7 @@ module Insightly2
       Resources::Email.parse(request(:get, "Leads/#{id}/Emails"))
     end
 
-    # GET /v2.1/Leads/{c_id}/Image
+    # GET /v2.2/Leads/{c_id}/Image
     # Gets a lead's image.
     # @param [String, Fixnum] id The ID of the lead.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -32,7 +32,7 @@ module Insightly2
       request(:get, "Leads/#{id}/Image")
     end
 
-    # GET /v2.1/Leads/{c_id}/Notes
+    # GET /v2.2/Leads/{c_id}/Notes
     # Gets a lead's notes.
     # @param [String, Fixnum] id The ID of the lead.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -42,7 +42,7 @@ module Insightly2
       Resources::Note.parse(request(:get, "Leads/#{id}/Notes"))
     end
 
-    # GET /v2.1/Leads/{c_id}/Tasks
+    # GET /v2.2/Leads/{c_id}/Tasks
     # Gets a lead's tasks.
     # @param [String, Fixnum] id The ID of the lead.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -52,7 +52,7 @@ module Insightly2
       Resources::Task.parse(request(:get, "Leads/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Leads?ids={ids}&email={email}&tag={tag}&includeConverted={includeConverted}
+    # GET /v2.2/Leads?ids={ids}&email={email}&tag={tag}&includeConverted={includeConverted}
     # Get a list of Leads.
     # @param [Array] ids The lead ids of the Leads to return (optional).
     # @param [String] email The email address of the lead to return (optional).
@@ -64,7 +64,7 @@ module Insightly2
       Resources::Lead.parse(request(:get, url))
     end
 
-    # POST /v2.1/Leads
+    # POST /v2.2/Leads
     # Creates a lead.
     # @param [Hash] lead The lead to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -74,7 +74,7 @@ module Insightly2
       Resources::Lead.parse(request(:post, "Leads", lead))
     end
 
-    # POST /v2.1/Leads/{c_id}/Image/{filename}
+    # POST /v2.2/Leads/{c_id}/Image/{filename}
     # Adds a lead's image.
     # @param [String, Fixnum] id The ID of the lead.
     # @param [String] filename The name of image file to be attached to the lead.
@@ -86,7 +86,7 @@ module Insightly2
       request(:post, "Leads/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Leads
+    # PUT /v2.2/Leads
     # Updates a lead.
     # @param [Hash] lead The lead to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -96,7 +96,7 @@ module Insightly2
       Resources::Lead.parse(request(:put, "Leads", lead))
     end
 
-    # PUT /v2.1/Leads/{c_id}/Image/{filename}
+    # PUT /v2.2/Leads/{c_id}/Image/{filename}
     # Updates a lead's image.
     # @param [String, Fixnum] id The ID of the lead.
     # @param [String] filename The name of image file to be attached to the lead.
@@ -108,7 +108,7 @@ module Insightly2
       request(:put, "Leads/#{id}/Image/#{filename}")
     end
 
-    # DELETE /v2.1/Leads/{id}
+    # DELETE /v2.2/Leads/{id}
     # Deletes a lead.
     # @param [String, Fixnum] id The ID of the lead to delete.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -118,7 +118,7 @@ module Insightly2
       request(:delete, "Leads/#{id}")
     end
 
-    # DELETE /v2.1/Leads/{c_id}/Image
+    # DELETE /v2.2/Leads/{c_id}/Image
     # Deletes a lead's image.
     # @param [String, Fixnum] id The ID of the lead with the image to delete.
     # @raise [ArgumentError] If the method arguments are blank.

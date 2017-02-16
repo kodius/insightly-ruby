@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/TaskCategories/1947437
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/TaskCategories/1947437
     body:
       encoding: UTF-8
       string: ''
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 17:17:53 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/TaskCategories
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/TaskCategories
     body:
       encoding: UTF-8
       string: '{"CATEGORY_ID":1947437,"CATEGORY_NAME":"Meeting","ACTIVE":true,"BACKGROUND_COLOR":"9f4681"}'
@@ -72,7 +72,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/TaskCategories/1947437
+      - https://api.insight.ly/v2.2/TaskCategories/1947437
       Vary:
       - Accept-Encoding
       Server:

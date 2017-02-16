@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/CustomFields/CONTACT_FIELD_1
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/CustomFields/CONTACT_FIELD_1
     body:
       encoding: UTF-8
       string: ''

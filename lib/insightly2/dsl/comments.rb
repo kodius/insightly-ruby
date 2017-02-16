@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Comments
-    # GET /v2.1/Comments/{id}
+    # GET /v2.2/Comments/{id}
     # Get a comment.
     # @param [String, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Comment.parse(request(:get, "Comments/#{id}"))
     end
 
-    # POST /v2.1/Comments?c_id={c_id}&filename={filename}
+    # POST /v2.2/Comments?c_id={c_id}&filename={filename}
     # Adds a file attachment to a comment.
     # @param [String, Fixnum] id A comment's ID.
     # @param [String] filename The name of the attachment.
@@ -24,7 +24,7 @@ module Insightly2
       request(:post, "Comments/?c_id=#{id}&filename=#{filename}")
     end
 
-    # PUT /v2.1/Comments
+    # PUT /v2.2/Comments
     # Updates a comment.
     # @param [Hash] comment The comment to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -34,7 +34,7 @@ module Insightly2
       Resources::Comment.parse(request(:put, "Comments", comment))
     end
 
-    # DELETE /v2.1/Comments/{id}
+    # DELETE /v2.2/Comments/{id}
     # Deletes a comment.
     # @param [String, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.

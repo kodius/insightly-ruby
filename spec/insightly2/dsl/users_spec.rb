@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Users do
   let(:user_id) { 607181 }
 
-  # GET /v2.1/Users/{id}
+  # GET /v2.2/Users/{id}
   describe '#get_user' do
     it 'returns a user' do
       VCR.use_cassette('get_user') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Users do
     end
   end
 
-  # GET /v2.1/Users
+  # GET /v2.2/Users
   describe '#get_users' do
     it 'returns an array of users' do
       VCR.use_cassette('get_users') do

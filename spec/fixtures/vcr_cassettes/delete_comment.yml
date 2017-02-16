@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Comments/3469515
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Comments/3469515
     body:
       encoding: UTF-8
       string: ''

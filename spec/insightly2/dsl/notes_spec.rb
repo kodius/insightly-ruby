@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Notes do
   let(:note_id) { 15377334 }
 
-  # GET /v2.1/Notes/{id}
+  # GET /v2.2/Notes/{id}
   describe '#get_note' do
     it 'returns a note' do
       VCR.use_cassette('get_note') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # GET /v2.1/Notes
+  # GET /v2.2/Notes
   describe '#get_notes' do
     it 'returns an array of notes' do
       VCR.use_cassette('get_notes') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # GET /v2.1/Notes/{c_id}/Comments
+  # GET /v2.2/Notes/{c_id}/Comments
   describe '#get_note_comments' do
     it 'returns a notes comments' do
       VCR.use_cassette('get_note_comments') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # POST /v2.1/Notes
+  # POST /v2.2/Notes
   describe '#create_note' do
     it 'creates and returns a note' do
       VCR.use_cassette('create_note') do
@@ -44,7 +44,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # POST /v2.1/Notes/{c_id}/Comments
+  # POST /v2.2/Notes/{c_id}/Comments
   describe '#create_note_comment' do
     it 'creates a comment for a note' do
       VCR.use_cassette('create_note_comment') do
@@ -54,7 +54,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # POST /v2.1/Notes?c_id={c_id}&filename={filename}
+  # POST /v2.2/Notes?c_id={c_id}&filename={filename}
   describe '#create_note_file' do
     it 'creates an attachment for a note' do
       VCR.use_cassette('create_note_file') do
@@ -64,7 +64,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # PUT /v2.1/Notes
+  # PUT /v2.2/Notes
   describe '#update_note' do
     it 'updates and returns a note' do
       VCR.use_cassette('update_note') do
@@ -74,7 +74,7 @@ describe Insightly2::DSL::Notes do
     end
   end
 
-  # DELETE /v2.1/Notes/{id}
+  # DELETE /v2.2/Notes/{id}
   describe '#delete_note' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_note') do

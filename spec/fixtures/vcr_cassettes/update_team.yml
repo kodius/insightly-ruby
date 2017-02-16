@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Teams/2063767
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Teams/2063767
     body:
       encoding: UTF-8
       string: ''
@@ -46,7 +46,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 17:47:07 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Teams
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Teams
     body:
       encoding: UTF-8
       string: '{"TEAM_ID":2063767,"TEAM_NAME":"Team Cobra","ANONYMOUS_TEAM":false,"DATE_CREATED_UTC":"2014-10-05
@@ -74,7 +74,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Teams/2063767
+      - https://api.insight.ly/v2.2/Teams/2063767
       Vary:
       - Accept-Encoding
       Server:

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/LeadStatuses?includeConverted=false
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/LeadStatuses?includeConverted=false
     body:
       encoding: UTF-8
       string: ''
@@ -47,7 +47,7 @@ http_interactions:
   recorded_at: Mon, 29 Feb 2016 09:36:08 GMT
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/LeadStatuses
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/LeadStatuses
     body:
       encoding: UTF-8
       string: '{"LEAD_STATUS_ID":823514,"LEAD_STATUS":"NotContacted","DEFAULT_STATUS":true,"STATUS_TYPE":0,"FIELD_ORDER":1}'
@@ -74,7 +74,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/LeadStatuses/841784
+      - https://api.insight.ly/v2.2/LeadStatuses/841784
       Server:
       - Microsoft-IIS/7.5
       X-Powered-By:

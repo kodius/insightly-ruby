@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Projects
-    # GET /v2.1/Projects/{id}
+    # GET /v2.2/Projects/{id}
     # Get a project.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Project.parse(request(:get, "Projects/#{id}"))
     end
 
-    # GET /v2.1/Projects/{c_id}/Emails
+    # GET /v2.2/Projects/{c_id}/Emails
     # Get a list of project emails.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,7 +22,7 @@ module Insightly2
       Resources::Email.parse(request(:get, "Projects/#{id}/Emails"))
     end
 
-    # GET /v2.1/Projects/{c_id}/Image
+    # GET /v2.2/Projects/{c_id}/Image
     # Get a project image.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -32,7 +32,7 @@ module Insightly2
       request(:get, "Projects/#{id}/Image")
     end
 
-    # GET /v2.1/Projects/{c_id}/Notes
+    # GET /v2.2/Projects/{c_id}/Notes
     # Get a projects notes.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -42,7 +42,7 @@ module Insightly2
       Resources::Note.parse(request(:get, "Projects/#{id}/Notes"))
     end
 
-    # GET /v2.1/Projects/{c_id}/Tasks
+    # GET /v2.2/Projects/{c_id}/Tasks
     # Get a project tasks.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -52,7 +52,7 @@ module Insightly2
       Resources::Task.parse(request(:get, "Projects/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Projects?ids={ids}&tag={tag}
+    # GET /v2.2/Projects?ids={ids}&tag={tag}
     # Get a list of projects.
     # @param [Array] ids The IDs of the projects to retrieve (optional).
     # @param [String] tag The tag that is applied to the projects (optional).
@@ -62,7 +62,7 @@ module Insightly2
       Resources::Project.parse(request(:get, url))
     end
 
-    # POST /v2.1/Projects
+    # POST /v2.2/Projects
     # Create a project.
     # @param [Hash] project The project to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -72,7 +72,7 @@ module Insightly2
       Resources::Project.parse(request(:post, "Projects", project))
     end
 
-    # POST /v2.1/Projects/{c_id}/Image/{filename}
+    # POST /v2.2/Projects/{c_id}/Image/{filename}
     # Create a project image.
     # @param [String, Fixnum] id A project's ID.
     # @param [String] filename A Project image file name.
@@ -84,7 +84,7 @@ module Insightly2
       request(:post, "Projects/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Projects
+    # PUT /v2.2/Projects
     # Update a project.
     # @param [Hash] project The project to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -94,7 +94,7 @@ module Insightly2
       Resources::Project.parse(request(:put, "Projects", project))
     end
 
-    # PUT /v2.1/Projects/{c_id}/Image/{filename}
+    # PUT /v2.2/Projects/{c_id}/Image/{filename}
     # Update a project's image.
     # @param [String, Fixnum] id A project's ID.
     # @param [String] filename A project image file name.
@@ -106,7 +106,7 @@ module Insightly2
       request(:put, "Projects/#{id}/Image/#{filename}")
     end
 
-    # DELETE /v2.1/Projects/{id}
+    # DELETE /v2.2/Projects/{id}
     # Delete a project.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -116,7 +116,7 @@ module Insightly2
       request(:delete, "Projects/#{id}")
     end
 
-    # DELETE /v2.1/Projects/{c_id}/Image
+    # DELETE /v2.2/Projects/{c_id}/Image
     # Delete a project image.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.

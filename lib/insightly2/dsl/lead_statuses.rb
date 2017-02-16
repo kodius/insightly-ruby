@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::LeadStatuses
-    # GET /v2.1/LeadStatuses?includeConverted={includeConverted}
+    # GET /v2.2/LeadStatuses?includeConverted={includeConverted}
     # Get a list of lead statuses.
     # @return [Array, nil].
     def get_lead_statuses(includeConverted: 'false')
@@ -10,7 +10,7 @@ module Insightly2
       Resources::LeadStatus.parse(request(:get, url))
     end
 
-    # POST /v2.1/LeadStatuses
+    # POST /v2.2/LeadStatuses
     # Create a lead status.
     # @param [Hash] lead_status: The lead status to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -20,7 +20,7 @@ module Insightly2
       Resources::LeadStatus.parse(request(:post, "LeadStatuses", lead_status))
     end
 
-    # PUT /v2.1/LeadStatuses
+    # PUT /v2.2/LeadStatuses
     # Update a lead status.
     # @param [Hash] lead_status: The lead status to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -30,7 +30,7 @@ module Insightly2
       Resources::LeadStatus.parse(request(:put, "LeadStatuses", lead_status))
     end
 
-    # DELETE /v2.1/LeadStatuses/{id}
+    # DELETE /v2.2/LeadStatuses/{id}
     # Delete a lead status.
     # @param [String, Fixnum] id A lead status's ID.
     # @raise [ArgumentError] If the method arguments are blank.

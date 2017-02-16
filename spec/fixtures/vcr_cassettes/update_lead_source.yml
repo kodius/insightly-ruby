@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/LeadSources
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/LeadSources
     body:
       encoding: UTF-8
       string: ''
@@ -51,7 +51,7 @@ http_interactions:
   recorded_at: Mon, 29 Feb 2016 09:45:12 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/LeadSources
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/LeadSources
     body:
       encoding: UTF-8
       string: '{"FIELD_ORDER":5,"LEAD_SOURCE":"Other","DEFAULT_VALUE":false,"LEAD_SOURCE_ID":830630}'
@@ -78,7 +78,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/LeadSources/830630
+      - https://api.insight.ly/v2.2/LeadSources/830630
       Vary:
       - Accept-Encoding
       Server:

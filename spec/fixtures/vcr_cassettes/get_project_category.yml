@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/ProjectCategories/1947441
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/ProjectCategories/1947441
     body:
       encoding: UTF-8
       string: ''

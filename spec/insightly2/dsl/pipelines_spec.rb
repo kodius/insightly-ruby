@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Pipelines do
   let(:pipeline_id) { 124170 }
 
-  # GET /v2.1/Pipelines/{id}
+  # GET /v2.2/Pipelines/{id}
   describe '#get_pipeline' do
     it 'returns a pipeline' do
       VCR.use_cassette('get_pipeline') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Pipelines do
     end
   end
 
-  # GET /v2.1/Pipelines
+  # GET /v2.2/Pipelines
   describe '#get_pipelines' do
     it 'returns an array of pipelines' do
       VCR.use_cassette('get_pipelines') do

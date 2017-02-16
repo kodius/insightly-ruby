@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Tags
-    # GET /v2.1/Tags/{id}
+    # GET /v2.2/Tags/{id}
     # Get a tag.
     # @param [String, Fixnum] id A Tag's ID.
     # @raise [ArgumentError] If the method arguments are blank.

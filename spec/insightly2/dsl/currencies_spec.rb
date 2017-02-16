@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Countries do
-  # GET /v2.1/Currencies
+  # GET /v2.2/Currencies
   describe '#get_currencies' do
     it 'returns an array of currencies' do
       VCR.use_cassette('get_currencies') do

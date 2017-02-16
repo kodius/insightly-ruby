@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::FileAttachments do
   let(:file_attachment_id) { 33105536 }
 
-  # GET /v2.1/FileAttachments/{id}
+  # GET /v2.2/FileAttachments/{id}
   describe '#get_file_attachment' do
     it 'returns a response with code 200' do
       VCR.use_cassette('get_file_attachment') do

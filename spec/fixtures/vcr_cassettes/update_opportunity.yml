@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Opportunities/4070112
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Opportunities/4070112
     body:
       encoding: UTF-8
       string: ''
@@ -48,7 +48,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 01:01:50 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Opportunities
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Opportunities
     body:
       encoding: UTF-8
       string: '{"OPPORTUNITY_ID":4070112,"OPPORTUNITY_NAME":"#030031: Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin
@@ -78,7 +78,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Opportunities/4070112
+      - https://api.insight.ly/v2.2/Opportunities/4070112
       Vary:
       - Accept-Encoding
       Server:

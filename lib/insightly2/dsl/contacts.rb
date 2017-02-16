@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Contacts
-    # GET /v2.1/Contacts/{id}
+    # GET /v2.2/Contacts/{id}
     # Gets a contact by id.
     # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Contact.parse(request(:get, "Contacts/#{id}"))
     end
 
-    # GET /v2.1/Contacts/{c_id}/Emails
+    # GET /v2.2/Contacts/{c_id}/Emails
     # Gets a contact's emails.
     # @param [id:] id of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,7 +22,7 @@ module Insightly2
       Resources::Email.parse(request(:get, "Contacts/#{id}/Emails"))
     end
 
-    # GET /v2.1/Contacts/{c_id}/Image
+    # GET /v2.2/Contacts/{c_id}/Image
     # Gets a contact's image.
     # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -32,7 +32,7 @@ module Insightly2
       request(:get, "Contacts/#{id}/Image")
     end
 
-    # GET /v2.1/Contacts/{c_id}/Notes
+    # GET /v2.2/Contacts/{c_id}/Notes
     # Gets a contact's notes.
     # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -42,7 +42,7 @@ module Insightly2
       Resources::Note.parse(request(:get, "Contacts/#{id}/Notes"))
     end
 
-    # GET /v2.1/Contacts/{c_id}/Tasks
+    # GET /v2.2/Contacts/{c_id}/Tasks
     # Gets a contact's tasks.
     # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -52,7 +52,7 @@ module Insightly2
       Resources::Task.parse(request(:get, "Contacts/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
+    # GET /v2.2/Contacts?ids={ids}&email={email}&tag={tag}
     # Get a list of contacts.
     # @param [Array] ids The contact ids of the contacts to return (optional).
     # @param [String] email The email address of the contact to return (optional).
@@ -63,7 +63,7 @@ module Insightly2
       Resources::Contact.parse(request(:get, url))
     end
 
-    # POST /v2.1/Contacts
+    # POST /v2.2/Contacts
     # Creates a contact.
     # @param [Hash] contact The contact to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -73,7 +73,7 @@ module Insightly2
       Resources::Contact.parse(request(:post, "Contacts", contact))
     end
 
-    # POST /v2.1/Contacts/{c_id}/Image/{filename}
+    # POST /v2.2/Contacts/{c_id}/Image/{filename}
     # Adds a contact's image.
     # @param [String, Fixnum] id The ID of the contact.
     # @param [String] filename The name of image file to be attached to the contact.
@@ -85,7 +85,7 @@ module Insightly2
       request(:post, "Contacts/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Contacts
+    # PUT /v2.2/Contacts
     # Updates a contact.
     # @param [Hash] contact The contact to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -95,7 +95,7 @@ module Insightly2
       Resources::Contact.parse(request(:put, "Contacts", contact))
     end
 
-    # PUT /v2.1/Contacts/{c_id}/Image/{filename}
+    # PUT /v2.2/Contacts/{c_id}/Image/{filename}
     # Updates a contact's image.
     # @param [String, Fixnum] id The ID of the contact.
     # @param [String] filename The name of image file to be attached to the contact.
@@ -107,7 +107,7 @@ module Insightly2
       request(:put, "Contacts/#{id}/Image/#{filename}")
     end
 
-    # DELETE /v2.1/Contacts/{id}
+    # DELETE /v2.2/Contacts/{id}
     # Deletes a contact.
     # @param [String, Fixnum] id The ID of the contact to delete.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -117,7 +117,7 @@ module Insightly2
       request(:delete, "Contacts/#{id}")
     end
 
-    # DELETE /v2.1/Contacts/{c_id}/Image
+    # DELETE /v2.2/Contacts/{c_id}/Image
     # Deletes a contact's image.
     # @param [String, Fixnum] id The ID of the contact with the image to delete.
     # @raise [ArgumentError] If the method arguments are blank.

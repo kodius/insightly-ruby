@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Pipelines
-    # GET /v2.1/Pipelines/{id}
+    # GET /v2.2/Pipelines/{id}
     # Get a pipeline.
     # @param [String, Fixnum] id A pipeline's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Pipeline.parse(request(:get, "Pipelines/#{id}"))
     end
 
-    # GET /v2.1/Pipelines
+    # GET /v2.2/Pipelines
     # Get a list of pipelines.
     # @return [Insightly2::Resources::Pipeline, nil].
     def get_pipelines

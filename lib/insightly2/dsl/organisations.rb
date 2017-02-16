@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Organisations
-    # GET /v2.1/Organisations/{id}
+    # GET /v2.2/Organisations/{id}
     # Get an organisation.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Organisation.parse(request(:get, "Organisations/#{id}"))
     end
 
-    # GET /v2.1/Organisations/{c_id}/Emails
+    # GET /v2.2/Organisations/{c_id}/Emails
     # Get an organisation's emails.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,7 +22,7 @@ module Insightly2
       Resources::Email.parse(request(:get, "Organisations/#{id}/Emails"))
     end
 
-    # GET /v2.1/Organisations/{c_id}/Image
+    # GET /v2.2/Organisations/{c_id}/Image
     # Get an organisations image.
     # @param [String, Fixnum] id An organisation's ID
     # @raise [ArgumentError] If the method arguments are blank.
@@ -31,7 +31,7 @@ module Insightly2
       request(:get, "Organisations/#{id}/Image")
     end
 
-    # GET /v2.1/Organisations/{c_id}/Notes
+    # GET /v2.2/Organisations/{c_id}/Notes
     # Get an organisations notes.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -41,7 +41,7 @@ module Insightly2
       Resources::Note.parse(request(:get, "Organisations/#{id}/Notes"))
     end
 
-    # GET /v2.1/Organisations/{c_id}/Tasks
+    # GET /v2.2/Organisations/{c_id}/Tasks
     # Get an organisations tasks.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -51,7 +51,7 @@ module Insightly2
       Resources::Task.parse(request(:get, "Organisations/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
+    # GET /v2.2/Organisations?ids={ids}&domain={domain}&tag={tag}
     # @param [Array] ids The organisation's IDs (optional).
     # @param [String] domain The email domain (optional).
     # @param [String] tag The tag an organisation has been tagged with (optional).
@@ -61,7 +61,7 @@ module Insightly2
       Resources::Organisation.parse(request(:get, url))
     end
 
-    # POST /v2.1/Organisations
+    # POST /v2.2/Organisations
     # Create an organisation.
     # @param [Hash] organisation The organisation to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -71,7 +71,7 @@ module Insightly2
       Resources::Organisation.parse(request(:post, "Organisations", organisation))
     end
 
-    # POST /v2.1/Organisations/{c_id}/Image/{filename}
+    # POST /v2.2/Organisations/{c_id}/Image/{filename}
     # Create an organisation image.
     # @param [String, Fixnum] id The organisation's ID.
     # @param [String] filename The name of the file.
@@ -83,7 +83,7 @@ module Insightly2
       request(:post, "Organisations/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Organisations
+    # PUT /v2.2/Organisations
     # Update an organisation.
     # @param [Hash] organisation The organisation to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -93,7 +93,7 @@ module Insightly2
       Resources::Organisation.parse(request(:put, "Organisations", organisation))
     end
 
-    # PUT /v2.1/Organisations/{c_id}/Image/{filename}
+    # PUT /v2.2/Organisations/{c_id}/Image/{filename}
     # Update an organisation's image.
     # @param [String, Fixnum] id An organisation's ID.
     # @param [String] filename name of the file.
@@ -105,7 +105,7 @@ module Insightly2
       request(:put, "Organisations/#{id}/Image/#{filename}")
     end
 
-    # DELETE /v2.1/Organisations/{id}
+    # DELETE /v2.2/Organisations/{id}
     # Delete an organisation.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -115,7 +115,7 @@ module Insightly2
       request(:delete, "Organisations/#{id}")
     end
 
-    # DELETE /v2.1/Organisations/{c_id}/Image
+    # DELETE /v2.2/Organisations/{c_id}/Image
     # Delete an organisation image.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.

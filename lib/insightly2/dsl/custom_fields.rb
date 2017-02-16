@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::CustomFields
-    # GET /v2.1/CustomFields/{id}
+    # GET /v2.2/CustomFields/{id}
     # Get a custom field.
     # @param [String, Fixnum] id A CustomField's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::CustomField.parse(request(:get, "CustomFields/#{id}"))
     end
 
-    # GET /v2.1/CustomFields
+    # GET /v2.2/CustomFields
     # Get a list of custom fields.
     # @return [Array, nil].
     def get_custom_fields

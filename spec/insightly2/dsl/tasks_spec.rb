@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Tasks do
   let(:task_id) { 14694323 }
 
-  # GET /v2.1/Tasks/{id}
+  # GET /v2.2/Tasks/{id}
   describe '#get_task' do
     it 'returns a task' do
       VCR.use_cassette('get_task') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Tasks do
     end
   end
 
-  # GET /v2.1/Tasks?ids={ids}
+  # GET /v2.2/Tasks?ids={ids}
   describe '#get_tasks' do
     it 'returns an array of tasks' do
       VCR.use_cassette('get_tasks') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Tasks do
     end
   end
 
-  # GET /v2.1/Tasks/{id}/Comments
+  # GET /v2.2/Tasks/{id}/Comments
   describe '#get_comment_tasks' do
     it 'returns an array of task comments' do
       VCR.use_cassette('get_task_comments') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Tasks do
     end
   end
 
-  # POST /v2.1/Tasks
+  # POST /v2.2/Tasks
   describe '#create_task' do
     it 'creates and returns task' do
       VCR.use_cassette('create_task') do
@@ -44,7 +44,7 @@ describe Insightly2::DSL::Tasks do
     end
   end
 
-  # POST /v2.1/Tasks/{c_id}/Comments
+  # POST /v2.2/Tasks/{c_id}/Comments
   describe '#create_task_comment' do
     it 'creates and returns comment' do
       VCR.use_cassette('create_task_comment') do
@@ -53,7 +53,7 @@ describe Insightly2::DSL::Tasks do
     end
   end
 
-  # PUT /v2.1/Tasks
+  # PUT /v2.2/Tasks
   describe '#update_task' do
     it 'updates and returns task' do
       VCR.use_cassette('update_task') do
@@ -63,7 +63,7 @@ describe Insightly2::DSL::Tasks do
     end
   end
 
-  # DELETE /v2.1/Tasks/{id}
+  # DELETE /v2.2/Tasks/{id}
   describe '#delete_task' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_task') do

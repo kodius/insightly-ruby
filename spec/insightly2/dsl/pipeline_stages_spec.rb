@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::PipelineStages do
   let(:pipeline_stage_id) { 377384 }
 
-  # GET /v2.1/PipelineStages/{id}
+  # GET /v2.2/PipelineStages/{id}
   describe '#get_pipeline_stage' do
     it 'returns a pipeline stage' do
       VCR.use_cassette('get_pipeline_stage') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::PipelineStages do
     end
   end
 
-  # GET /v2.1/PipelineStages
+  # GET /v2.2/PipelineStages
   describe '#get_pipeline_stages' do
     it 'returns an array of pipeline_stages' do
       VCR.use_cassette('get_pipeline_stages') do

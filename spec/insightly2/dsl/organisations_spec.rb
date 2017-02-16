@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Organisations do
   let(:organisation_id) { 39831139 }
 
-  # GET /v2.1/Organisations/{id}
+  # GET /v2.2/Organisations/{id}
   describe '#get_organisation' do
     it 'returns an organisation' do
       VCR.use_cassette('get_organisation') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # GET /v2.1/Organisations/{c_id}/Emails
+  # GET /v2.2/Organisations/{c_id}/Emails
   describe '#get_organisation_emails' do
     it 'returns organisation emails' do
       VCR.use_cassette('get_organisation_emails') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # GET /v2.1/Organisations/{c_id}/Image
+  # GET /v2.2/Organisations/{c_id}/Image
   # describe '#get_organisation_image' do
   #   it 'returns organisation image' do
   #     VCR.use_cassette('get_organisation_image') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Organisations do
   #   end
   # end
 
-  # GET /v2.1/Organisations/{c_id}/Notes
+  # GET /v2.2/Organisations/{c_id}/Notes
   describe '#get_organisation_notes' do
     it 'returns organisation notes' do
       VCR.use_cassette('get_organisation_notes') do
@@ -45,7 +45,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # GET /v2.1/Organisations/{c_id}/Tasks
+  # GET /v2.2/Organisations/{c_id}/Tasks
   describe '#get_organisation_tasks' do
     it 'returns organisation tasks' do
       VCR.use_cassette('get_organisation_tasks') do
@@ -56,7 +56,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
+  # GET /v2.2/Organisations?ids={ids}&domain={domain}&tag={tag}
   describe '#get_organisations' do
     it 'returns an array of organisations' do
       VCR.use_cassette('get_organisations') do
@@ -67,7 +67,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # POST /v2.1/Organisations
+  # POST /v2.2/Organisations
   describe '#create_organisation' do
     it 'creates and returns organisation' do
       VCR.use_cassette('create_organisation') do
@@ -77,7 +77,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # POST /v2.1/Organisations/{c_id}/Image/{filename}
+  # POST /v2.2/Organisations/{c_id}/Image/{filename}
   # describe '#create_organisation_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('create_organisation_image') do
@@ -88,7 +88,7 @@ describe Insightly2::DSL::Organisations do
   #   end
   # end
 
-  # PUT /v2.1/Organisations
+  # PUT /v2.2/Organisations
   describe '#update_organisation' do
     it 'updates and returns organisation' do
       VCR.use_cassette('update_organisation') do
@@ -98,7 +98,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # PUT /v2.1/Organisations/{c_id}/Image/{filename}
+  # PUT /v2.2/Organisations/{c_id}/Image/{filename}
   # describe '#update_organisation_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('update_organisation_image') do
@@ -109,7 +109,7 @@ describe Insightly2::DSL::Organisations do
   #   end
   # end
 
-  # DELETE /v2.1/Organisations/{id}
+  # DELETE /v2.2/Organisations/{id}
   describe '#delete_organisation' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_organisation') do
@@ -119,7 +119,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # DELETE /v2.1/Organisations/{c_id}/Image
+  # DELETE /v2.2/Organisations/{c_id}/Image
   describe '#delete_organisation_image' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_organisation_image') do

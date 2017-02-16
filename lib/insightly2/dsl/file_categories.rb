@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::FileCategories
-    # GET /v2.1/FileCategories/{id}
+    # GET /v2.2/FileCategories/{id}
     # Get a file category.
     # @param [String, Fixnum] id: A file category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,14 +12,14 @@ module Insightly2
       Resources::FileCategory.parse(request(:get, "FileCategories/#{id}"))
     end
 
-    # GET /v2.1/FileCategories
+    # GET /v2.2/FileCategories
     # Get a list of file categories.
     # @return [Array, nil].
     def get_file_categories
       Resources::FileCategory.parse(request(:get, "FileCategories"))
     end
 
-    # POST /v2.1/FileCategories
+    # POST /v2.2/FileCategories
     # Create a file category.
     # @param [Hash] category: File Category attributes.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -29,7 +29,7 @@ module Insightly2
       Resources::FileCategory.parse(request(:post, "FileCategories", category))
     end
 
-    # PUT /v2.1/FileCategories
+    # PUT /v2.2/FileCategories
     # Update a file category.
     # @param [Hash] category: File Category attributes.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -39,7 +39,7 @@ module Insightly2
       Resources::FileCategory.parse(request(:put, "FileCategories", category))
     end
 
-    # DELETE /v2.1/FileCategories/{id}
+    # DELETE /v2.2/FileCategories/{id}
     # Delete a file category.
     # @param [String, Fixnum] id: A file category's ID.
     # @raise [ArgumentError] If the method arguments are blank.

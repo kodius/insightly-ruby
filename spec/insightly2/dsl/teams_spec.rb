@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Teams do
   let(:team_id) { 2063767 }
 
-  # GET /v2.1/Teams/{id}
+  # GET /v2.2/Teams/{id}
   describe '#get_team' do
     it 'returns a team' do
       VCR.use_cassette('get_team') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Teams do
     end
   end
 
-  # GET /v2.1/Teams
+  # GET /v2.2/Teams
   describe '#get_teams' do
     it 'returns an array of teams' do
       VCR.use_cassette('get_teams') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Teams do
     end
   end
 
-  # POST /v2.1/Teams
+  # POST /v2.2/Teams
   describe '#create_team' do
     it 'creates and returns a team' do
       VCR.use_cassette('create_team') do
@@ -33,7 +33,7 @@ describe Insightly2::DSL::Teams do
     end
   end
 
-  # PUT /v2.1/Teams
+  # PUT /v2.2/Teams
   describe '#update_team' do
     it 'updates and returns a team' do
       VCR.use_cassette('update_team') do
@@ -43,7 +43,7 @@ describe Insightly2::DSL::Teams do
     end
   end
 
-  # DELETE /v2.1/Teams/{id}
+  # DELETE /v2.2/Teams/{id}
   describe '#delete_team' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_team') do

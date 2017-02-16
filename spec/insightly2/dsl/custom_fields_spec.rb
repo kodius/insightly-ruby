@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::CustomFields do
   let(:custom_field_id) { 'CONTACT_FIELD_1' }
 
-  # GET /v2.1/CustomFields/{id}
+  # GET /v2.2/CustomFields/{id}
   describe '#get_custom_field' do
     it 'returns a custom field' do
       VCR.use_cassette('get_custom_field') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::CustomFields do
     end
   end
 
-  # GET /v2.1/CustomFields
+  # GET /v2.2/CustomFields
   describe '#get_custom_fields' do
     it 'returns an array of custom fields' do
       VCR.use_cassette('get_custom_fields') do

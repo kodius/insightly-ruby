@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Opportunities do
   let(:opportunity_id) { 4070112 }
 
-  # GET /v2.1/Opportunities/{id}
+  # GET /v2.2/Opportunities/{id}
   describe '#get_opportunity' do
     it 'returns an opportunity' do
       VCR.use_cassette('get_opportunity') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # GET /v2.1/Opportunities/{c_id}/Emails
+  # GET /v2.2/Opportunities/{c_id}/Emails
   describe '#get_opportunity_emails' do
     it 'returns an opportunity emails' do
       VCR.use_cassette('get_opportunity_emails') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # GET /v2.1/Opportunities/{c_id}/Image
+  # GET /v2.2/Opportunities/{c_id}/Image
   # describe '#get_opportunity_image' do
   #   it 'returns an opportunity image' do
   #     VCR.use_cassette('get_opportunity_image') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Opportunities do
   #   end
   # end
 
-  # GET /v2.1/Opportunities/{c_id}/Notes
+  # GET /v2.2/Opportunities/{c_id}/Notes
   describe '#get_opportunity_notes' do
     it 'returns an opportunity notes' do
       VCR.use_cassette('get_opportunity_notes') do
@@ -45,7 +45,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # GET /v2.1/Opportunities/{c_id}/StateHistory
+  # GET /v2.2/Opportunities/{c_id}/StateHistory
   # describe '#get_opportunity_state_history' do
   #   it 'returns an opportunity state history' do
   #     VCR.use_cassette('get_opportunity_state_history') do
@@ -57,7 +57,7 @@ describe Insightly2::DSL::Opportunities do
   #   end
   # end
 
-  # GET /v2.1/Opportunities/{c_id}/Tasks
+  # GET /v2.2/Opportunities/{c_id}/Tasks
   describe '#get_opportunity_tasks' do
     it 'returns an opportunity tasks' do
       VCR.use_cassette('get_opportunity_tasks') do
@@ -68,7 +68,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # GET /v2.1/Opportunities?ids={ids}&tag={tag}
+  # GET /v2.2/Opportunities?ids={ids}&tag={tag}
   describe '#get_opportunities' do
     it 'returns an array of opportunities' do
       VCR.use_cassette('get_opportunities') do
@@ -79,7 +79,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # POST /v2.1/Opportunities
+  # POST /v2.2/Opportunities
   describe '#create_opportunity' do
     it 'creates and returns an opportunity' do
       VCR.use_cassette('create_opportunity') do
@@ -89,7 +89,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # POST /v2.1/Opportunities/{c_id}/Image/{filename}
+  # POST /v2.2/Opportunities/{c_id}/Image/{filename}
   # describe '#create_opportunity_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('create_opportunity_image') do
@@ -100,7 +100,7 @@ describe Insightly2::DSL::Opportunities do
   #   end
   # end
 
-  # PUT /v2.1/Opportunities
+  # PUT /v2.2/Opportunities
   describe '#update_opportunities' do
     it 'updates and returns an opportunity' do
       VCR.use_cassette('update_opportunity') do
@@ -110,7 +110,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # PUT /v2.1/Opportunities/{c_id}/Image/{filename}
+  # PUT /v2.2/Opportunities/{c_id}/Image/{filename}
   # describe '#update_opportunity_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('update_opportunity_image') do
@@ -121,7 +121,7 @@ describe Insightly2::DSL::Opportunities do
   #   end
   # end
 
-  # DELETE /v2.1/Opportunities/{id}
+  # DELETE /v2.2/Opportunities/{id}
   describe '#delete_opportunity' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_opportunity') do
@@ -131,7 +131,7 @@ describe Insightly2::DSL::Opportunities do
     end
   end
 
-  # DELETE /v2.1/Opportunities/{c_id}/Image
+  # DELETE /v2.2/Opportunities/{c_id}/Image
   describe '#delete_opportunity_image' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_opportunity_image') do

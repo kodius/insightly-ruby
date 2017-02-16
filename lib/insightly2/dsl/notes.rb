@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Notes
-    # GET /v2.1/Notes/{id}
+    # GET /v2.2/Notes/{id}
     # Get a note.
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -12,7 +12,7 @@ module Insightly2
       Resources::Note.parse(request(:get, "Notes/#{id}"))
     end
 
-    # GET /v2.1/Notes/{c_id}/Comments
+    # GET /v2.2/Notes/{c_id}/Comments
     # Gets the comments attached to a note.
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -22,14 +22,14 @@ module Insightly2
       Resources::Comment.parse(request(:get, "Notes/#{id}/Comments"))
     end
 
-    # GET /v2.1/Notes
+    # GET /v2.2/Notes
     # Get a list of notes.
     # @return [Insightly2::Resources::Note, nil].
     def get_notes
       Resources::Note.parse(request(:get, "Notes"))
     end
 
-    # POST /v2.1/Notes
+    # POST /v2.2/Notes
     # Creates a note.
     # @param [Hash] note The note to create.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -39,7 +39,7 @@ module Insightly2
       Resources::Note.parse(request(:post, "Notes", note))
     end
 
-    # POST /v2.1/Notes/{c_id}/Comments
+    # POST /v2.2/Notes/{c_id}/Comments
     # Create a comment for a note.
     # @param [String, Fixnum] id A Note's ID.
     # @param [String] comment The comment to add to the note.
@@ -51,7 +51,7 @@ module Insightly2
       request(:post, "Notes/#{id}/Comments", comment)
     end
 
-    # POST /v2.1/Notes?c_id={c_id}&filename={filename}
+    # POST /v2.2/Notes?c_id={c_id}&filename={filename}
     # Adds a File Attachment to a Note.
     # @param [String, Fixnum] id A Note's ID.
     # @param [String] filename The name of the file.
@@ -63,7 +63,7 @@ module Insightly2
       request(:post, "Notes?c_id=#{id}&filename=#{filename}")
     end
 
-    # PUT /v2.1/Notes
+    # PUT /v2.2/Notes
     # Updates a note.
     # @param [Hash] note The note to update.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -73,7 +73,7 @@ module Insightly2
       Resources::Note.parse(request(:put, "Notes", note))
     end
 
-    # DELETE /v2.1/Notes/{id}
+    # DELETE /v2.2/Notes/{id}
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].

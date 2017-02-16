@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Leads do
   let(:lead_id) { 7246484 }
 
-  # GET /v2.1/Leads/{id}
+  # GET /v2.2/Leads/{id}
   describe '#get_lead' do
     it 'returns a lead' do
       VCR.use_cassette('get_lead') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Leads do
     end
   end
 
-  # POST /v2.1/Leads
+  # POST /v2.2/Leads
   describe '#create_lead' do
     it 'creates and returns a lead' do
       VCR.use_cassette('create_lead') do
@@ -22,7 +22,7 @@ describe Insightly2::DSL::Leads do
     end
   end
 
-  # PUT /v2.1/Leads
+  # PUT /v2.2/Leads
   describe '#update_lead' do
     it 'updates and returns a lead' do
       VCR.use_cassette('update_lead') do
@@ -32,7 +32,7 @@ describe Insightly2::DSL::Leads do
     end
   end
 
-  # DELETE /v2.1/Lead/{id}
+  # DELETE /v2.2/Lead/{id}
   describe '#delete_lead' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_lead') do
@@ -42,7 +42,7 @@ describe Insightly2::DSL::Leads do
     end
   end
 
-  # GET /v2.1/Leads
+  # GET /v2.2/Leads
   describe '#get_leads' do
     it 'returns an array of leads' do
       VCR.use_cassette('get_leads') do

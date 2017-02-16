@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Tasks/14694323
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Tasks/14694323
     body:
       encoding: UTF-8
       string: ''
@@ -48,7 +48,7 @@ http_interactions:
   recorded_at: Sun, 05 Oct 2014 17:28:11 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Tasks
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Tasks
     body:
       encoding: UTF-8
       string: '{"TASK_ID":14694323,"Title":"Project Posted - Call or email requester","CATEGORY_ID":1947439,"DUE_DATE":"2013-11-18
@@ -78,7 +78,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Tasks/14694323
+      - https://api.insight.ly/v2.2/Tasks/14694323
       Vary:
       - Accept-Encoding
       Server:

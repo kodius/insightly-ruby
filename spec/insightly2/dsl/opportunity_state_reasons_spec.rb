@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Opportunities do
-  # GET /v2.1/OpportunityStateReasons
+  # GET /v2.2/OpportunityStateReasons
   describe '#get_opportunity_state_reasons' do
     it 'returns an array of opportunity_state_reasons' do
       VCR.use_cassette('get_opportunity_state_reasons') do

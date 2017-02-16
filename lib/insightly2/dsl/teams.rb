@@ -1,9 +1,9 @@
 require 'insightly2/dsl'
 
 module Insightly2
-  # https://api.insight.ly/v2.1/Help/ApiController/Teams
+  # https://api.insight.ly/v2.2/Help/ApiController/Teams
   module DSL::Teams
-    # GET /v2.1/Teams/{id}
+    # GET /v2.2/Teams/{id}
     # Get a team.
     # @param [String, Fixnum] id A team's ID.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -13,14 +13,14 @@ module Insightly2
       Resources::Team.parse(request(:get, "Teams/#{id}"))
     end
 
-    # GET /v2.1/Teams
+    # GET /v2.2/Teams
     # Get teams.
     # @return [Array, nil].
     def get_teams
       Resources::Team.parse(request(:get, "Teams"))
     end
 
-    # POST /v2.1/Teams
+    # POST /v2.2/Teams
     # Create a team.
     # @param [Hash] team The team we're creating.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -30,7 +30,7 @@ module Insightly2
       Resources::Team.parse(request(:post, "Teams", team))
     end
 
-    # PUT /v2.1/Teams
+    # PUT /v2.2/Teams
     # Update a team..
     # @param [Hash] team The team we're updating.
     # @raise [ArgumentError] If the method arguments are blank.
@@ -40,7 +40,7 @@ module Insightly2
       Resources::Team.parse(request(:put, 'Teams', team))
     end
 
-    # DELETE /v2.1/Teams/{id}
+    # DELETE /v2.2/Teams/{id}
     # Delete a team.
     # @param [String, Fixnum] id A Team's ID.
     # @raise [ArgumentError] If the method arguments are blank.

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Emails do
   let(:email_id) { 17683283 }
 
-  # GET /v2.1/Emails/{id}
+  # GET /v2.2/Emails/{id}
   describe '#get_email' do
     it 'returns an email' do
       VCR.use_cassette('get_email') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Emails do
     end
   end
 
-  # GET /v2.1/Emails?ids={ids}&tag={tag}
+  # GET /v2.2/Emails?ids={ids}&tag={tag}
   describe '#get_emails' do
     it 'returns an array of emails' do
       VCR.use_cassette('get_emails') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Emails do
     end
   end
 
-  # GET /v2.1/Emails/{c_id}/Comments
+  # GET /v2.2/Emails/{c_id}/Comments
   describe '#get_email_comments' do
     it 'returns an array of comments' do
       VCR.use_cassette('get_email_comments') do
@@ -34,7 +34,7 @@ describe Insightly2::DSL::Emails do
     end
   end
 
-  # POST /v2.1/Emails/{c_id}/Comments
+  # POST /v2.2/Emails/{c_id}/Comments
   describe '#create_email_comment' do
     it 'returns a response with code 201' do
       VCR.use_cassette('create_email_comment') do
@@ -44,7 +44,7 @@ describe Insightly2::DSL::Emails do
     end
   end
 
-  # DELETE /v2.1/Emails/{id}
+  # DELETE /v2.2/Emails/{id}
   describe '#delete_email' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_email') do

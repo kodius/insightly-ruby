@@ -102,7 +102,7 @@ This will also catch ```Insightly2::Errors::ResourceNotFoundError``` but is less
 
 ## API docs
 
-[Insightly API Documentation](https://api.insight.ly/v2.1/Help)
+[Insightly API Documentation](https://api.insight.ly/v2.2/Help)
 
 ## Contributing
 

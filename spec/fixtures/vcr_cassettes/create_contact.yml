@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Contacts
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts
     body:
       encoding: UTF-8
       string: '{"first_name":"Shark","last_name":"Nado"}'
@@ -29,7 +29,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Contacts/80192679
+      - https://api.insight.ly/v2.2/Contacts/80192679
       Server:
       - Microsoft-IIS/7.5
       Date:

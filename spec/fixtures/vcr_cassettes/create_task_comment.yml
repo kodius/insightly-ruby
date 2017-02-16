@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Tasks/14694323/Comments
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Tasks/14694323/Comments
     body:
       encoding: UTF-8
       string: '{"title":"Sharknado"}'
@@ -29,7 +29,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Comments/3470213
+      - https://api.insight.ly/v2.2/Comments/3470213
       Server:
       - Microsoft-IIS/7.5
       Date:

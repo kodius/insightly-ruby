@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Emails/17683283/Comments
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Emails/17683283/Comments
     body:
       encoding: UTF-8
       string: ''

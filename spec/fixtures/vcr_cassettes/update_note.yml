@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes/15377334
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Notes/15377334
     body:
       encoding: UTF-8
       string: ''
@@ -48,7 +48,7 @@ http_interactions:
   recorded_at: Sat, 04 Oct 2014 23:33:12 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Notes
     body:
       encoding: UTF-8
       string: '{"NOTE_ID":15377334,"TITLE":"Don''t mess with the nado","BODY":"\r\n<p>It''s
@@ -78,7 +78,7 @@ http_interactions:
       Expires:
       - "-1"
       Location:
-      - https://api.insight.ly/v2.1/Notes/15377334
+      - https://api.insight.ly/v2.2/Notes/15377334
       Vary:
       - Accept-Encoding
       Server:

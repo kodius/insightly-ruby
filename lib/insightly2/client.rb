@@ -22,6 +22,11 @@ module Insightly2
     def initialize(api_key = Insightly2.api_key)
       @api_key = api_key
 
+      puts '-------'
+      puts 'Api key:'
+      puts @api_key
+      puts '-------'
+
       # Setup HTTP request connection to insightly.
       @connection ||= Faraday.new do |builder|
         builder.basic_auth @api_key, ''
